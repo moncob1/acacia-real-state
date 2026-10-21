@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acacia Real State · Alquilamos sensaciones</title><meta name="description" content="Alquilamos sensaciones ✨ | ¡Descubre nuevas experiencias! Alojamientos en Paraguay y Brasil.">
+<meta name="theme-color" content="#0b0f13">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;600;700;800&family=Chakra+Petch:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b0f13;--night:#0d161c;--char:#171a1f;--slate:#313339;--wine:#2b2020;--brown:#633d2f;--copper:#9b6c51;--cream:#f0e1bd;
+--glass:rgba(23,26,31,.55);--line:rgba(155,108,81,.35);--glow:0 0 24px rgba(155,108,81,.45);
+--tech:"Tektur","Chakra Petch",sans-serif;--head:"Tektur","Chakra Petch",sans-serif;--sans:"Chakra Petch",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;background:var(--ink)}
+body{font-family:var(--sans);font-weight:300;color:#e9dcc0;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--cream);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--cream);color:var(--ink);padding:8px 14px;z-index:99}.skip:focus{left:8px}
+.wrap{max-width:1080px;margin:auto;padding:0 20px}
+/* fondo global */
+.bg{position:fixed;inset:0;z-index:-2;background:radial-gradient(80% 60% at 50% 0%,#2b2020 0%,transparent 70%),radial-gradient(60% 50% at 100% 100%,rgba(99,61,47,.45),transparent 70%),linear-gradient(180deg,var(--night),var(--ink))}
+.grid-floor{position:fixed;left:-50%;right:-50%;bottom:0;height:60vh;z-index:-1;pointer-events:none;
+background-image:linear-gradient(rgba(155,108,81,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(155,108,81,.5) 1px,transparent 1px);background-size:64px 64px;
+transform:perspective(520px) rotateX(64deg);transform-origin:bottom;-webkit-mask-image:linear-gradient(to top,#000 25%,transparent 95%);mask-image:linear-gradient(to top,#000 25%,transparent 95%);animation:floor 6s linear infinite}
+@keyframes floor{to{background-position:0 64px}}
+#fx{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.cursor{position:fixed;width:420px;height:420px;left:0;top:0;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(240,225,189,.09),rgba(155,108,81,.06) 40%,transparent 70%);transform:translate(-50%,-50%);opacity:0;transition:opacity .4s}
+@media(hover:hover){body:hover .cursor{opacity:1}}
+/* tipografía */
+.kicker{font:500 .72rem var(--tech);letter-spacing:.36em;text-transform:uppercase;color:var(--copper)}
+.kicker::before{content:"";display:inline-block;width:22px;height:1px;background:var(--copper);vertical-align:middle;margin-right:12px;box-shadow:var(--glow)}
+h2{font:600 clamp(1.9rem,6vw,2.9rem)/1.1 var(--head);color:var(--cream);margin-top:14px;letter-spacing:-.01em}
+/* botones */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:14px 28px;border-radius:14px;font:500 .82rem var(--tech);letter-spacing:.16em;text-transform:uppercase;transition:transform .3s,box-shadow .3s,border-color .3s}
+.btn svg{width:18px;height:18px}
+.btn::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,248,230,.45),transparent);transform:skewX(-20deg);animation:scan 4.5s ease-in-out infinite}
+@keyframes scan{0%,60%{left:-60%}100%{left:130%}}
+.btn-solid{background:linear-gradient(135deg,var(--cream),#d6b88f 50%,var(--copper));color:var(--ink);box-shadow:0 0 0 1px rgba(240,225,189,.4),0 10px 40px rgba(155,108,81,.45)}
+.btn-solid:hover{transform:translateY(-2px);box-shadow:0 0 0 1px var(--cream),0 14px 50px rgba(155,108,81,.7)}
+.btn-glass{background:rgba(240,225,189,.05);border:1px solid var(--line);color:var(--cream);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.btn-glass:hover{border-color:var(--cream);box-shadow:var(--glow);transform:translateY(-2px)}
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;padding:100px 20px 120px}
+.hero-in{position:relative;max-width:860px}
+.logo-wrap{position:relative;width:92px;height:92px;margin:0 auto 34px}
+.logo-wrap img{width:100%;height:100%;border-radius:50%;object-fit:cover;position:relative;z-index:1;border:1px solid rgba(240,225,189,.5)}
+.logo-wrap::before{content:"";position:absolute;inset:-8px;border-radius:50%;background:conic-gradient(from 0deg,transparent,var(--copper),var(--cream),transparent 60%);animation:spin 6s linear infinite;-webkit-mask:radial-gradient(circle,transparent 52px,#000 53px);mask:radial-gradient(circle,transparent 52px,#000 53px);filter:drop-shadow(0 0 8px rgba(155,108,81,.8))}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font:700 clamp(2.1rem,9vw,5.4rem)/1.02 var(--tech);letter-spacing:.06em;margin:20px 0 22px;color:var(--cream);text-shadow:0 0 30px rgba(155,108,81,.55),0 0 80px rgba(99,61,47,.6)}
+.logo-word{display:block;width:min(86vw,560px);height:auto;margin:0 auto;overflow:visible}
+.hero h1 span{display:block;font-size:.42em;letter-spacing:.62em;margin-top:14px;padding-left:.62em;background:linear-gradient(90deg,var(--copper),var(--cream),var(--copper));-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+.tag{font:400 clamp(1rem,3.6vw,1.2rem) var(--head);color:rgba(240,225,189,.82);max-width:36ch;margin:0 auto}
+.hud{display:flex;justify-content:center;gap:10px;margin:30px 0;flex-wrap:wrap}
+.hud span{font:500 .66rem var(--tech);letter-spacing:.24em;color:rgba(240,225,189,.65);padding:6px 12px;border:1px solid rgba(155,108,81,.3);border-radius:999px;background:rgba(11,15,19,.4)}
+.actions{display:flex;flex-direction:column;gap:14px;align-items:stretch;max-width:320px;margin:auto}
+@media(min-width:560px){.actions{flex-direction:row;max-width:none;justify-content:center}}
+.down{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font:500 .6rem var(--tech);letter-spacing:.4em;color:rgba(240,225,189,.5);display:flex;flex-direction:column;align-items:center;gap:10px}
+.down i{width:1px;height:42px;background:linear-gradient(var(--cream),transparent);animation:drip 2.2s ease-in-out infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+section{padding:90px 0;position:relative}
+.head{margin-bottom:44px}.head p{margin-top:12px;color:rgba(233,220,192,.7);max-width:52ch}
+/* glass */
+.glass{background:var(--glass);border:1px solid rgba(155,108,81,.28);border-radius:20px;backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);box-shadow:inset 0 1px 0 rgba(240,225,189,.08),0 20px 50px rgba(0,0,0,.35);position:relative}
+.glass::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(130deg,rgba(240,225,189,.5),transparent 30%,transparent 70%,rgba(155,108,81,.7));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.6;transition:opacity .4s}
+.glass:hover::before{opacity:1}
+/* valores */
+.values{display:grid;gap:16px}@media(min-width:760px){.values{grid-template-columns:repeat(3,1fr)}}
+.val{padding:28px 26px;transition:transform .4s,box-shadow .4s}.val:hover{transform:translateY(-4px);box-shadow:0 0 40px rgba(155,108,81,.25)}
+.val .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);color:var(--cream);box-shadow:var(--glow);background:rgba(155,108,81,.12)}
+.val svg{width:22px;height:22px}.val h3{font:600 1.15rem var(--head);color:var(--cream);margin:18px 0 6px;letter-spacing:.02em}.val p{font-size:.93rem;color:rgba(233,220,192,.7)}
+.val .n{position:absolute;top:22px;right:24px;font:500 .7rem var(--tech);color:rgba(155,108,81,.7);letter-spacing:.2em}
+/* alojamientos */
+.region{display:flex;align-items:center;gap:14px;margin:54px 0 18px}.region:first-of-type{margin-top:0}
+.region h3{font:700 1rem var(--tech);letter-spacing:.3em;text-transform:uppercase;color:var(--cream)}
+.region small{font:400 .82rem var(--head);color:var(--copper);letter-spacing:.06em}
+.region::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.list{display:grid;gap:12px}
+.item{overflow:hidden;transition:box-shadow .5s,border-color .5s}
+.item.open{box-shadow:0 0 0 1px rgba(155,108,81,.5),0 0 60px rgba(155,108,81,.22),0 30px 60px rgba(0,0,0,.4)}
+.trig{width:100%;display:flex;align-items:center;gap:16px;padding:20px 20px;text-align:left;border-radius:20px;transition:background .3s}
+.trig:hover{background:rgba(240,225,189,.04)}
+.code{font:500 .68rem var(--tech);letter-spacing:.14em;color:var(--copper);min-width:34px}
+.tt{flex:1;min-width:0}.tt strong{display:block;font:500 clamp(1rem,3.8vw,1.18rem)/1.3 var(--head);color:var(--cream)}
+.tt span{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(233,220,192,.55);margin-top:4px}
+.plus{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .4s,background .4s}
+.plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:1.5px;background:var(--cream);transform:translate(-50%,-50%)}
+.plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .5s}
+.trig:hover .plus{box-shadow:var(--glow)}
+.open .plus{transform:rotate(180deg);background:rgba(155,108,81,.25);box-shadow:var(--glow)}.open .plus::after{transform:translate(-50%,-50%) rotate(0)}
+.panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .7s cubic-bezier(.2,.8,.2,1)}
+.open .panel{grid-template-rows:1fr}.panel>div{overflow:hidden;min-height:0}
+.pbody{padding:0 20px 20px;display:grid;gap:18px}
+@media(min-width:760px){.pbody{grid-template-columns:1.5fr 1fr;align-items:end}}
+.ph{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:16/10;background:var(--char);border:1px solid rgba(155,108,81,.35)}
+.ph img{width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);filter:blur(8px);transition:opacity .9s .2s,transform 1.4s .2s cubic-bezier(.2,.8,.2,1),filter .9s .2s}
+.open .ph img.ld{opacity:1;transform:scale(1);filter:none}
+.ph::after{content:"";position:absolute;left:0;right:0;height:30%;top:-30%;background:linear-gradient(180deg,transparent,rgba(240,225,189,.35),transparent);pointer-events:none}
+.open .ph::after{animation:sweep 1.2s .25s ease-out forwards}
+@keyframes sweep{to{top:110%}}
+.ph .corner{position:absolute;width:18px;height:18px;border:2px solid var(--cream);opacity:.8}
+.c1{top:10px;left:10px;border-right:0!important;border-bottom:0!important}.c2{bottom:10px;right:10px;border-left:0!important;border-top:0!important}
+.meta{display:grid;gap:14px;align-content:end;padding:6px 4px}.meta h5{font:500 1.5rem/1.2 var(--head);color:var(--cream)}.meta .k{font:500 .64rem var(--tech);letter-spacing:.3em;color:var(--copper)}.meta p{font-size:.9rem;color:rgba(233,220,192,.72)}
+/* contacto */
+.contacts{display:grid;gap:14px}@media(min-width:760px){.contacts{grid-template-columns:repeat(2,1fr)}}
+.ct{display:flex;align-items:center;gap:16px;padding:22px 22px;transition:transform .35s,box-shadow .35s}
+.ct:hover{transform:translateY(-3px);box-shadow:0 0 40px rgba(155,108,81,.3)}
+.ct .ic{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cream),var(--copper));color:var(--ink);box-shadow:var(--glow)}
+.ct svg{width:22px;height:22px}.ct small{display:block;font:500 .64rem var(--tech);letter-spacing:.28em;color:var(--copper)}
+.ct strong{display:block;font:500 1rem var(--head);color:var(--cream);word-break:break-word;margin-top:2px}
+footer{padding:40px 0 110px;border-top:1px solid rgba(155,108,81,.2);text-align:center;font-size:.85rem;color:rgba(233,220,192,.5)}
+footer .brand{font:700 .95rem var(--tech);letter-spacing:.3em;color:var(--cream)}
+.wa{position:fixed;right:18px;bottom:18px;z-index:50;width:60px;height:60px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,#2be07a,#1aa356);color:#fff;box-shadow:0 0 0 1px rgba(240,225,189,.35),0 0 30px rgba(37,211,102,.45),0 12px 30px rgba(0,0,0,.5);transition:transform .3s}
+.wa:hover{transform:translateY(-3px) scale(1.05)}.wa svg{width:30px;height:30px}
+.wa::after{content:"";position:absolute;inset:-6px;border-radius:22px;border:1px solid rgba(43,224,122,.6);animation:pulse 2.6s infinite}
+@keyframes pulse{to{transform:scale(1.25);opacity:0}}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}#fx,.cursor{display:none}}
+</style></head><body class="no-js">
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="bg" aria-hidden="true"></div><div class="grid-floor" aria-hidden="true"></div><canvas id="fx" aria-hidden="true"></canvas><div class="cursor" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4M12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8M12 0a12 12 0 0 0-10.3 18L0 24l6.2-1.6A12 12 0 1 0 12 0"/></symbol>
+<symbol id="i-arr" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7 17 17 7M9 7h8v8"/></symbol></svg>
+<header class="hero"><div class="hero-in">
+<div class="logo-wrap"><img src="img/logo.jpeg" alt="Logo de Acacia Real State" width="92" height="92"></div>
+<p class="kicker">Paraguay · Brasil</p>
+<h1 aria-label="Acacia Real State"><svg class="logo-word" viewBox="-14 -14 518 128" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff8e6"/><stop offset=".55" stop-color="#f0e1bd"/><stop offset="1" stop-color="#9b6c51"/></linearGradient>
+<filter id="gl" x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="5" result="b"/><feFlood flood-color="#9b6c51" flood-opacity=".9"/><feComposite in2="b" operator="in"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g fill="none" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="10" filter="url(#gl)"><g stroke="#633d2f" stroke-width="16" transform="translate(4 5)"><polyline points="0,100 40,0 80,100"/><line x1="22" y1="64" x2="58" y2="64"/><polyline points="172,4 116,4 94,26 94,74 116,96 172,96"/><polyline points="188,100 228,0 268,100"/><line x1="210" y1="64" x2="246" y2="64"/><polyline points="360,4 304,4 282,26 282,74 304,96 360,96"/><line x1="386" y1="0" x2="386" y2="100"/><polyline points="410,100 450,0 490,100"/><line x1="432" y1="64" x2="468" y2="64"/></g><g stroke="url(#lg)" stroke-width="14"><polyline points="0,100 40,0 80,100"/><line x1="22" y1="64" x2="58" y2="64"/><polyline points="172,4 116,4 94,26 94,74 116,96 172,96"/><polyline points="188,100 228,0 268,100"/><line x1="210" y1="64" x2="246" y2="64"/><polyline points="360,4 304,4 282,26 282,74 304,96 360,96"/><line x1="386" y1="0" x2="386" y2="100"/><polyline points="410,100 450,0 490,100"/><line x1="432" y1="64" x2="468" y2="64"/></g><g stroke="#0b0f13" stroke-width="3" opacity=".55"><polyline points="0,100 40,0 80,100"/><line x1="22" y1="64" x2="58" y2="64"/><polyline points="172,4 116,4 94,26 94,74 116,96 172,96"/><polyline points="188,100 228,0 268,100"/><line x1="210" y1="64" x2="246" y2="64"/><polyline points="360,4 304,4 282,26 282,74 304,96 360,96"/><line x1="386" y1="0" x2="386" y2="100"/><polyline points="410,100 450,0 490,100"/><line x1="432" y1="64" x2="468" y2="64"/></g></g></svg><span>REAL STATE</span></h1>
+<p class="tag">Alquilamos sensaciones ✨ | ¡Descubre nuevas experiencias!</p>
+<div class="hud" aria-hidden="true"><span>ASUNCIÓN</span><span>CAMBORIÚ</span><span>FOZ DE IGUAZÚ</span></div>
+<div class="actions"><a class="btn btn-solid" href="#alojamientos">Ver alojamientos</a>
+<a class="btn btn-glass" href="https://wa.me/595995627959" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></div>
+</div><div class="down" aria-hidden="true">SCROLL<i></i></div></header>
+<main id="main">
+<section aria-labelledby="t-val"><div class="wrap">
+<div class="head rv"><p class="kicker">Esencia</p><h2 id="t-val">Experiencias, no solo estadías</h2></div>
+<div class="values">
+<div class="val glass rv"><span class="n">01</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div><h3>Ubicación</h3><p>Asunción, Balneário Camboriú y Foz de Iguazú.</p></div>
+<div class="val glass rv"><span class="n">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M3 18v2M21 18v2M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/></svg></div><h3>Comodidad</h3><p>Espacios pensados para que te sientas como en casa.</p></div>
+<div class="val glass rv"><span class="n">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div><h3>Atención</h3><p>Escribinos por WhatsApp o por mail.</p></div>
+</div></div></section>
+<section id="alojamientos" aria-labelledby="t-al"><div class="wrap">
+<div class="head rv"><p class="kicker">Alojamientos</p><h2 id="t-al">Elegí tu próximo destino</h2><p>Tocá cada alojamiento para ver la foto y reservar en Airbnb.</p></div>
+<div class="region rv"><h3>Paraguay</h3><small>Las Mercedes · Asunción</small></div>
+<div class="list" data-g="py"></div>
+<div class="region rv"><h3>Brasil</h3><small>Balneário Camboriú · Foz de Iguazú</small></div>
+<div class="list" data-g="br"></div>
+<noscript><ul style="padding:20px"><li><a href="https://es-l.airbnb.com/rooms/1684080790413128134">1 dorm Las Mercedes</a></li></ul></noscript>
+</div></section>
+<section id="contacto" aria-labelledby="t-ct"><div class="wrap">
+<div class="head rv"><p class="kicker">Contacto</p><h2 id="t-ct">Hablemos de tu estadía</h2></div>
+<div class="contacts">
+<a class="ct glass rv" href="https://wa.me/595995627959" target="_blank" rel="noopener"><span class="ic"><svg aria-hidden="true"><use href="#i-wa"/></svg></span><span><small>WHATSAPP</small><strong>+595 995 627 959</strong></span></a>
+<a class="ct glass rv" href="mailto:acacia22in@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>EMAIL</small><strong>acacia22in@gmail.com</strong></span></a>
+<a class="ct glass rv" href="https://www.instagram.com/acacia_real_state" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></span><span><small>INSTAGRAM</small><strong>@acacia_real_state</strong></span></a>
+<a class="ct glass rv" href="https://www.threads.com/@acacia_real_state" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M17 8.5C16.2 5.6 14.3 4 11.8 4 8 4 5.5 7 5.5 12s2.5 8 6.5 8c3.4 0 5.7-2 5.7-4.6 0-2.4-1.9-3.9-4.8-3.9-2.2 0-3.6 1.1-3.6 2.6 0 1.4 1.2 2.3 2.7 2.3 2.4 0 3.6-2 3.4-5.6"/></svg></span><span><small>THREADS</small><strong>@acacia_real_state</strong></span></a>
+</div></div></section></main>
+<footer><div class="wrap"><p class="brand">ACACIA REAL STATE</p><p style="margin-top:8px">Alquilamos sensaciones ✨ · © 2026</p></div></footer>
+<a class="wa" href="https://wa.me/595995627959" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp al +595 995 627 959"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+<script>
+const D=[
+{g:"py",t:"1 dorm Las Mercedes · wifi + 4 huéspedes",l:"Las Mercedes · Asunción, Paraguay",i:"lm-1dorm.avif",u:"https://es-l.airbnb.com/rooms/1684080790413128134?unique_share_id=44dc7406-b812-429d-bafb-22968b5533b7&viralityEntryPoint=1&s=76"},
+{g:"py",t:"Studio Las Mercedes · balcón privado",l:"Las Mercedes · Asunción, Paraguay",i:"lm-studio.avif",u:"https://www.airbnb.cl/rooms/1766111724747562767?unique_share_id=c38acf6d-cd54-4c8e-81f8-4190d75a8a1b&viralityEntryPoint=1&s=76"},
+{g:"py",t:"Monoambiente Las Mercedes · workspace",l:"Las Mercedes · Asunción, Paraguay",i:"lm-workspace.avif",u:"https://es-l.airbnb.com/rooms/1625566661485539250?viralityEntryPoint=1&s=76"},
+{g:"py",t:"Monoambiente Las Mercedes · smart lock",l:"Las Mercedes · Asunción, Paraguay",i:"lm-smartlock.avif",u:"https://es-l.airbnb.com/rooms/1624643239327625249?viralityEntryPoint=1&s=76"},
+{g:"br",t:"⭐️ Balneário Camboriú",l:"Balneário Camboriú · Santa Catarina, Brasil",i:"camboriu.avif",u:"https://www.airbnb.com.br/rooms/1217668415258676876?unique_share_id=5bde2f1f-0a52-4966-ab46-81ecd4ba0384&viralityEntryPoint=1&s=76"},
+{g:"br",t:"Apartamento en My Mabu con acceso al Blue Park",l:"Foz de Iguazú · Paraná, Brasil",i:"mymabu.avif",u:"https://es-l.airbnb.com/rooms/1650102625230141194?unique_share_id=9ec572bc-8c5c-4813-af81-8e4b4a42b02f&viralityEntryPoint=1&s=76"}];
+document.querySelector('noscript')?.remove();
+D.forEach((d,k)=>{const id='p'+k,el=document.createElement('article');el.className='item glass rv';
+el.innerHTML=`<h4 style="margin:0"><button class="trig" aria-expanded="false" aria-controls="${id}" id="b${id}"><span class="code">0${k+1}</span><span class="tt"><strong></strong><span></span></span><span class="plus" aria-hidden="true"></span></button></h4>
+<div class="panel" id="${id}" role="region" aria-labelledby="b${id}" hidden><div><div class="pbody"><div class="ph"><img alt="" data-src="img/${d.i}"><i class="corner c1"></i><i class="corner c2"></i></div>
+<div class="meta"><span class="k">DISPONIBLE EN AIRBNB</span><h5></h5><p></p><a class="btn btn-solid" target="_blank" rel="noopener">Ver en Airbnb <svg aria-hidden="true"><use href="#i-arr"/></svg></a></div></div></div></div>`;
+el.querySelector('strong').textContent=d.t;el.querySelector('.tt span').textContent=d.l;el.querySelector('.meta p').textContent=d.l;el.querySelector('.meta h5').textContent=d.t;
+el.querySelector('img').alt='Foto de '+d.t;el.querySelector('.meta a').href=d.u;el.querySelector('.meta a').setAttribute('aria-label','Ver '+d.t+' en Airbnb (abre en una pestaña nueva)');
+document.querySelector(`[data-g="${d.g}"]`).append(el)});
+document.querySelectorAll('.trig').forEach(b=>b.addEventListener('click',()=>{const it=b.closest('.item'),p=it.querySelector('.panel'),o=b.getAttribute('aria-expanded')==='true';
+if(!o){p.hidden=false;const im=p.querySelector('img');if(!im.src){im.onload=()=>im.classList.add('ld');im.src=im.dataset.src}requestAnimationFrame(()=>requestAnimationFrame(()=>it.classList.add('open')))}
+else{it.classList.remove('open');setTimeout(()=>{if(!it.classList.contains('open'))p.hidden=true},700)}
+b.setAttribute('aria-expanded',String(!o))}));
+document.body.classList.remove('no-js');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!rm){const c=document.querySelector('.cursor');addEventListener('pointermove',e=>{c.style.left=e.clientX+'px';c.style.top=e.clientY+'px'});
+const cv=document.getElementById('fx'),x=cv.getContext('2d');let W,H,P=[];
+const rs=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight;P=Array.from({length:Math.min(60,W/22)},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.4+.4}))};rs();addEventListener('resize',rs);
+(function f(){x.clearRect(0,0,W,H);for(const p of P){p.x=(p.x+p.vx+W)%W;p.y=(p.y+p.vy+H)%H;x.fillStyle='rgba(240,225,189,.55)';x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill()}
+for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<120){x.strokeStyle=`rgba(155,108,81,${.25*(1-d/120)})`;x.lineWidth=.6;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
+requestAnimationFrame(f)})()}
+</script></body></html>
