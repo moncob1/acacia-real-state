@@ -112,6 +112,29 @@ footer .brand{font:700 .95rem var(--tech);letter-spacing:.3em;color:var(--cream)
 .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
 .no-js .rv{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}#fx,.cursor{display:none}}
+
+/* revista + soholoft */
+.cut{clip-path:polygon(18px 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%,0 18px)}
+.mag{display:grid;gap:22px;padding:34px 28px;overflow:hidden}
+@media(min-width:760px){.mag{grid-template-columns:1.4fr 1fr;align-items:center;padding:44px 40px}}
+.mag h3{font:700 clamp(1.6rem,5.5vw,2.4rem)/1.05 var(--tech);letter-spacing:.08em;color:var(--cream);text-transform:uppercase}
+.mag h3 b{display:block;font-size:.5em;letter-spacing:.5em;color:var(--copper);margin-top:8px}
+.mag p{color:rgba(233,220,192,.78);margin-top:14px;max-width:48ch}
+.mag .acts{display:flex;flex-direction:column;gap:12px}
+.mag .stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.mag .stats span,.chips span{font:500 .64rem var(--tech);letter-spacing:.2em;text-transform:uppercase;color:rgba(240,225,189,.8);padding:6px 11px;border:1px solid var(--line);background:rgba(11,15,19,.35);clip-path:polygon(6px 0,100% 0,100% calc(100% - 6px),calc(100% - 6px) 100%,0 100%,0 6px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.soho{display:grid;gap:14px}@media(min-width:760px){.soho{grid-template-columns:repeat(2,1fr)}}
+.sc{padding:24px 24px}.sc h3{font:600 1.05rem var(--tech);letter-spacing:.14em;text-transform:uppercase;color:var(--cream);margin-bottom:8px}.sc p,.sc li{font-size:.92rem;color:rgba(233,220,192,.74)}
+.sc ul{list-style:none;display:grid;gap:6px}.sc li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed rgba(155,108,81,.25);padding-bottom:6px}.sc li em{font-style:normal;color:var(--copper);font:500 .72rem var(--tech);letter-spacing:.1em;white-space:nowrap}
+.src{font-size:.75rem;color:rgba(233,220,192,.45);margin-top:16px}
+/* galería en panel */
+.gal{display:grid;gap:8px}.gal .th{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.gal .th button{flex:none;width:76px;height:54px;border-radius:8px;overflow:hidden;border:1px solid var(--line);opacity:.6;transition:opacity .3s,border-color .3s}
+.gal .th button[aria-current="true"]{opacity:1;border-color:var(--cream);box-shadow:var(--glow)}
+.gal .th img{width:100%;height:100%;object-fit:cover}
+.meta .d{font-size:.92rem;color:rgba(233,220,192,.8)}.meta .lnk{font:500 .7rem var(--tech);letter-spacing:.18em;color:var(--copper);text-transform:uppercase}
+.meta .lnk:hover{color:var(--cream)}
 </style></head><body class="no-js">
 <a class="skip" href="#main">Saltar al contenido</a>
 <div class="bg" aria-hidden="true"></div><div class="grid-floor" aria-hidden="true"></div><canvas id="fx" aria-hidden="true"></canvas><div class="cursor" aria-hidden="true"></div>
@@ -126,6 +149,7 @@ footer .brand{font:700 .95rem var(--tech);letter-spacing:.3em;color:var(--cream)
 <p class="tag">Alquilamos sensaciones ✨ | ¡Descubre nuevas experiencias!</p>
 <div class="hud" aria-hidden="true"><span>ASUNCIÓN</span><span>CAMBORIÚ</span><span>FOZ DE IGUAZÚ</span></div>
 <div class="actions"><a class="btn btn-solid" href="#alojamientos">Ver alojamientos</a>
+<a class="btn btn-glass" href="revista/">Leer la revista</a>
 <a class="btn btn-glass" href="https://wa.me/595995627959" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></div>
 </div><div class="down" aria-hidden="true">SCROLL<i></i></div></header>
 <main id="main">
@@ -136,8 +160,22 @@ footer .brand{font:700 .95rem var(--tech);letter-spacing:.3em;color:var(--cream)
 <div class="val glass rv"><span class="n">02</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6M3 18h18M3 18v2M21 18v2M6 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/></svg></div><h3>Comodidad</h3><p>Espacios pensados para que te sientas como en casa.</p></div>
 <div class="val glass rv"><span class="n">03</span><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div><h3>Atención</h3><p>Escribinos por WhatsApp o por mail.</p></div>
 </div></div></section>
+<section id="revista" aria-labelledby="t-rev"><div class="wrap">
+<div class="mag glass cut rv"><div><p class="kicker">Edición 2026</p><h3 id="t-rev">Revista Acacia Living<b>Publicación oficial</b></h3>
+<p>Alojamientos diseñados para tu comodidad, guía de barrios y todo lo que encontrás cerca. Leela online, página por página, o descargala en PDF.</p>
+<div class="stats"><span>48 páginas</span><span>Asunción</span><span>Las Mercedes</span><span>Soholoft</span></div></div>
+<div class="acts"><a class="btn btn-solid" href="revista/">Leer la revista <svg aria-hidden="true"><use href="#i-arr"/></svg></a><a class="btn btn-glass" href="revista/Revista-Acacia-Living-2026.pdf" download>Descargar PDF · 13 MB</a></div></div>
+</div></section>
+<section id="soholoft" aria-labelledby="t-soho"><div class="wrap">
+<div class="head rv"><p class="kicker">Edificio Soholoft · Las Mercedes</p><h2 id="t-soho">Tu lugar en Las Mercedes</h2><p>En el corazón de Las Mercedes, nuestros departamentos combinan comodidad, diseño y una ubicación ideal para descubrir Asunción a tu ritmo. Cafés, restaurantes y rincones para disfrutar forman parte de la experiencia, a pocos pasos de tu alojamiento.</p></div>
+<div class="soho">
+<div class="sc glass cut rv"><h3>El edificio</h3><ul><li>Guardia<em>24 horas</em></li><li>Estacionamiento<em>Incluido</em></li><li>Azotea con parrilla<em>Vista a la bahía</em></li><li>La Quesería<em>Planta baja</em></li></ul><p class="src">Para usar la terraza en reuniones, coordiná previamente con nosotros por WhatsApp. En La Quesería los consumos se abonan directamente en el local.</p></div>
+<div class="sc glass cut rv"><h3>Cinco opciones</h3><ul><li>Verde Retreat<em>Monoambiente · 2 pers.</em></li><li>Terracotta Loft<em>Monoambiente · 2 pers.</em></li><li>Azul Loft<em>Monoambiente · 2 pers.</em></li><li>Ocre Loft<em>1 hab. · 4 pers.</em></li><li>La Dolce Vita<em>2 hab. · 6 pers.</em></li></ul></div>
+<div class="sc glass cut rv"><h3>En todos los departamentos</h3><div class="chips"><span>Cocina equipada</span><span>Bebedero de agua potable</span><span>Balcón</span><span>Wifi</span><span>Estacionamiento</span></div><p class="src">Las Mercedes combina la tranquilidad de un barrio tradicional con la comodidad de tener todo al alcance de unos pocos minutos.</p></div>
+<div class="sc glass cut rv"><h3>A pocos pasos</h3><ul><li>Totem Café<em>2 min caminando</em></li><li>La Huerta<em>2 min caminando</em></li><li>Stock 24 hs<em>3 min caminando</em></li><li>Biggie Express 24 hs<em>5 min caminando</em></li><li>Bar San Miguel · desde 1886<em>6 min caminando</em></li><li>Sanatorio Americano<em>6 min caminando</em></li><li>Costanera de Asunción<em>10 min en auto</em></li></ul><p class="src">Más cafés, restaurantes, bienestar y deporte en la <a class="lnk" href="revista/#p37">revista</a>.</p></div>
+</div></div></section>
 <section id="alojamientos" aria-labelledby="t-al"><div class="wrap">
-<div class="head rv"><p class="kicker">Alojamientos</p><h2 id="t-al">Elegí tu próximo destino</h2><p>Tocá cada alojamiento para ver la foto y reservar en Airbnb.</p></div>
+<div class="head rv"><p class="kicker">Alojamientos</p><h2 id="t-al">Elegí tu próximo destino</h2><p>Tocá cada alojamiento para ver sus fotos, detalles y reservar en Airbnb.</p></div>
 <div class="region rv"><h3>Paraguay</h3><small>Las Mercedes · Asunción</small></div>
 <div class="list" data-g="py"></div>
 <div class="region rv"><h3>Brasil</h3><small>Balneário Camboriú · Foz de Iguazú</small></div>
@@ -152,27 +190,32 @@ footer .brand{font:700 .95rem var(--tech);letter-spacing:.3em;color:var(--cream)
 <a class="ct glass rv" href="https://www.instagram.com/acacia_real_state" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></span><span><small>INSTAGRAM</small><strong>@acacia_real_state</strong></span></a>
 <a class="ct glass rv" href="https://www.threads.com/@acacia_real_state" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M17 8.5C16.2 5.6 14.3 4 11.8 4 8 4 5.5 7 5.5 12s2.5 8 6.5 8c3.4 0 5.7-2 5.7-4.6 0-2.4-1.9-3.9-4.8-3.9-2.2 0-3.6 1.1-3.6 2.6 0 1.4 1.2 2.3 2.7 2.3 2.4 0 3.6-2 3.4-5.6"/></svg></span><span><small>THREADS</small><strong>@acacia_real_state</strong></span></a>
 </div></div></section></main>
-<footer><div class="wrap"><p class="brand">ACACIA REAL STATE</p><p style="margin-top:8px">Alquilamos sensaciones ✨ · © 2026</p></div></footer>
+<footer><div class="wrap"><p class="brand">ACACIA REAL STATE</p><p style="margin-top:8px">Alquilamos sensaciones ✨ · <a href="revista/" style="color:var(--copper)">Revista Acacia Living</a> · © 2026</p></div></footer>
 <a class="wa" href="https://wa.me/595995627959" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp al +595 995 627 959"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
 <script>
 const D=[
-{g:"py",t:"1 dorm Las Mercedes · wifi + 4 huéspedes",l:"Las Mercedes · Asunción, Paraguay",i:"lm-1dorm.avif",u:"https://es-l.airbnb.com/rooms/1684080790413128134?unique_share_id=44dc7406-b812-429d-bafb-22968b5533b7&viralityEntryPoint=1&s=76"},
-{g:"py",t:"Studio Las Mercedes · balcón privado",l:"Las Mercedes · Asunción, Paraguay",i:"lm-studio.avif",u:"https://www.airbnb.cl/rooms/1766111724747562767?unique_share_id=c38acf6d-cd54-4c8e-81f8-4190d75a8a1b&viralityEntryPoint=1&s=76"},
-{g:"py",t:"Monoambiente Las Mercedes · workspace",l:"Las Mercedes · Asunción, Paraguay",i:"lm-workspace.avif",u:"https://es-l.airbnb.com/rooms/1625566661485539250?viralityEntryPoint=1&s=76"},
-{g:"py",t:"Monoambiente Las Mercedes · smart lock",l:"Las Mercedes · Asunción, Paraguay",i:"lm-smartlock.avif",u:"https://es-l.airbnb.com/rooms/1624643239327625249?viralityEntryPoint=1&s=76"},
-{g:"py",t:"Limoncello · 2 dorm, balcón, 6 pers, Las Mercedes",l:"Las Mercedes · Asunción, Paraguay",i:"lm-limoncello.avif",u:"https://www.airbnb.cl/rooms/1808809756008945076"},
+{g:"py",n:"Ocre Loft",t:"Ocre Loft · 1 dorm Las Mercedes · wifi + 4 huéspedes",l:"Soholoft · Las Mercedes · Asunción",i:"lm-1dorm.avif",x:["ocre-1","ocre-2","ocre-3"],pg:20,
+d:"Un refugio cálido en el corazón de Las Mercedes. Entre tonos tierra, luz natural y ladrillo visto, Ocre Loft propone una experiencia donde el confort y el diseño conviven en perfecta armonía.",f:["Hasta 4 personas","1 habitación independiente","1 baño","Sofá cama","Balcón privado","Coffee station","Bebedero","Rincón de relax"],u:"https://es-l.airbnb.com/rooms/1684080790413128134?unique_share_id=44dc7406-b812-429d-bafb-22968b5533b7&viralityEntryPoint=1&s=76"},
+{g:"py",n:"Azul Loft",t:"Azul Loft · Studio Las Mercedes · balcón privado",l:"Soholoft · Las Mercedes · Asunción",i:"lm-studio.avif",x:["azul-1","azul-2","azul-3"],pg:17,
+d:"Color, calidez y personalidad. Azul Loft integra descanso, living, comedor y cocina en un mismo ambiente: la madera aporta calidez y el azul profundo define su carácter. Ideal para dos personas.",f:["Hasta 2 personas","Monoambiente","1 baño","Balcón privado","Aire acondicionado","Wifi de alta velocidad","Smart TV con streaming","Estación de café"],u:"https://www.airbnb.cl/rooms/1766111724747562767?unique_share_id=c38acf6d-cd54-4c8e-81f8-4190d75a8a1b&viralityEntryPoint=1&s=76"},
+{g:"py",n:"Verde Retreat",t:"Verde Retreat · Monoambiente Las Mercedes · workspace",l:"Soholoft · Las Mercedes · Asunción",i:"lm-workspace.avif",x:["verde-1","verde-2","verde-3"],pg:11,
+d:"Un refugio contemporáneo en Las Mercedes: diseño inteligente, comodidad absoluta y una ubicación privilegiada. Sus 40 m² aprovechan cada rincón; ideal para ejecutivos, viajeros corporativos y estadías prolongadas.",f:["Hasta 2 personas","40 m²","Balcón con vista verde","Espacio de trabajo","Cocina completa","Cafetera estilo barista","Bebedero frío / caliente","Cochera incluida"],u:"https://es-l.airbnb.com/rooms/1625566661485539250?viralityEntryPoint=1&s=76"},
+{g:"py",n:"Terracotta Loft",t:"Terracotta Loft · Monoambiente Las Mercedes · smart lock",l:"Soholoft · Las Mercedes · Asunción",i:"lm-smartlock.avif",x:["terracota-1","terracota-2","terracota-3"],pg:14,
+d:"Donde cada detalle invita a quedarse. Tonos cálidos, texturas naturales y una atmósfera serena convierten este espacio en el refugio ideal para disfrutar la ciudad con calma.",f:["Hasta 2 personas","40 m²","Balcón privado","Cocina equipada","Coffee station","Espacio de trabajo","Bebedero frío / caliente","Cochera incluida"],u:"https://es-l.airbnb.com/rooms/1624643239327625249?viralityEntryPoint=1&s=76"},
+{g:"py",n:"La Dolce Vita",t:"Limoncello · La Dolce Vita · 2 dorm, balcón, 6 pers, Las Mercedes",l:"Soholoft · Las Mercedes · Asunción",i:"lm-limoncello.avif",x:["limoncello-1","limoncello-2","limoncello-3","limoncello-4","limoncello-5"],pg:23,
+d:"Un departamento con alma italiana en Asunción: el arte de disfrutar los pequeños placeres de la vida. Living con TV de 75\", habitación principal con cama King y baño privado, segundo dormitorio con cama de dos plazas y balcón para el atardecer.",f:["Hasta 6 personas","2 habitaciones","2 baños","Cama King 1,80 × 2,00","Sofá cama","Horno para pizza","Lavasecarropas","Balcón"],u:"https://www.airbnb.cl/rooms/1808809756008945076"},
 {g:"br",t:"⭐️ Balneário Camboriú",l:"Balneário Camboriú · Santa Catarina, Brasil",i:"camboriu.avif",u:"https://www.airbnb.com.br/rooms/1217668415258676876?unique_share_id=5bde2f1f-0a52-4966-ab46-81ecd4ba0384&viralityEntryPoint=1&s=76"},
 {g:"br",t:"Apartamento en My Mabu con acceso al Blue Park",l:"Foz de Iguazú · Paraná, Brasil",i:"mymabu.avif",u:"https://es-l.airbnb.com/rooms/1650102625230141194?unique_share_id=9ec572bc-8c5c-4813-af81-8e4b4a42b02f&viralityEntryPoint=1&s=76"}];
 document.querySelector('noscript')?.remove();
 D.forEach((d,k)=>{const id='p'+k,el=document.createElement('article');el.className='item glass rv';
 el.innerHTML=`<h4 style="margin:0"><button class="trig" aria-expanded="false" aria-controls="${id}" id="b${id}"><span class="code">0${k+1}</span><span class="tt"><strong></strong><span></span></span><span class="plus" aria-hidden="true"></span></button></h4>
-<div class="panel" id="${id}" role="region" aria-labelledby="b${id}" hidden><div><div class="pbody"><div class="ph"><img alt="" data-src="img/${d.i}"><i class="corner c1"></i><i class="corner c2"></i></div>
-<div class="meta"><span class="k">DISPONIBLE EN AIRBNB</span><h5></h5><p></p><a class="btn btn-solid" target="_blank" rel="noopener">Ver en Airbnb <svg aria-hidden="true"><use href="#i-arr"/></svg></a></div></div></div></div>`;
-el.querySelector('strong').textContent=d.t;el.querySelector('.tt span').textContent=d.l;el.querySelector('.meta p').textContent=d.l;el.querySelector('.meta h5').textContent=d.t;
+<div class="panel" id="${id}" role="region" aria-labelledby="b${id}" hidden><div><div class="pbody"><div class="gal"><div class="ph"><img alt="" data-src="img/${d.i}"><i class="corner c1"></i><i class="corner c2"></i></div>${d.x?'<div class="th"></div>':''}</div>
+<div class="meta"><span class="k">${d.n?'SOHOLOFT · LAS MERCEDES':'DISPONIBLE EN AIRBNB'}</span><h5></h5><p class="d"></p>${d.f?'<div class="chips"></div>':''}<p class="l"></p>${d.pg?`<a class="lnk" href="revista/#p${d.pg}">Verlo en la revista →</a>`:''}<a class="btn btn-solid" target="_blank" rel="noopener">Ver en Airbnb <svg aria-hidden="true"><use href="#i-arr"/></svg></a></div></div></div></div>`;
+el.querySelector('strong').textContent=d.t;el.querySelector('.tt span').textContent=d.l;el.querySelector('.meta .l').textContent=d.l;el.querySelector('.meta h5').textContent=d.n||d.t;el.querySelector('.meta .d').textContent=d.d||'';if(d.f)d.f.forEach(t=>{const c=document.createElement('span');c.textContent=t;el.querySelector('.chips').append(c)});if(d.x)el.dataset.x=JSON.stringify(['../'+d.i].concat(d.x.map(v=>'u/'+v+'.webp')));
 el.querySelector('img').alt='Foto de '+d.t;el.querySelector('.meta a').href=d.u;el.querySelector('.meta a').setAttribute('aria-label','Ver '+d.t+' en Airbnb (abre en una pestaña nueva)');
 document.querySelector(`[data-g="${d.g}"]`).append(el)});
 document.querySelectorAll('.trig').forEach(b=>b.addEventListener('click',()=>{const it=b.closest('.item'),p=it.querySelector('.panel'),o=b.getAttribute('aria-expanded')==='true';
-if(!o){p.hidden=false;const im=p.querySelector('img');if(!im.src){im.onload=()=>im.classList.add('ld');im.src=im.dataset.src}requestAnimationFrame(()=>requestAnimationFrame(()=>it.classList.add('open')))}
+if(!o){p.hidden=false;const im=p.querySelector('img');if(!im.src){im.onload=()=>im.classList.add('ld');im.src=im.dataset.src;if(it.dataset.x){const th=it.querySelector('.th');JSON.parse(it.dataset.x).forEach((v,j)=>{const src='img/'+v.replace('../',''),bt=document.createElement('button');bt.type='button';bt.setAttribute('aria-label','Ver foto '+(j+1));bt.setAttribute('aria-current',j?'false':'true');bt.innerHTML=`<img alt="" loading="lazy" src="${src}">`;bt.onclick=()=>{im.src=src;th.querySelectorAll('button').forEach(z=>z.setAttribute('aria-current','false'));bt.setAttribute('aria-current','true')};th.append(bt)})}}requestAnimationFrame(()=>requestAnimationFrame(()=>it.classList.add('open')))}
 else{it.classList.remove('open');setTimeout(()=>{if(!it.classList.contains('open'))p.hidden=true},700)}
 b.setAttribute('aria-expanded',String(!o))}));
 document.body.classList.remove('no-js');
